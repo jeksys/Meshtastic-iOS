@@ -1,8 +1,15 @@
-#  <#Title#>
+#  TODO
 
-https://github.com/apple/swift-protobuf
-https://www.raywenderlich.com/749-introduction-to-protocol-buffers-on-ios
-https://en.wikipedia.org/wiki/Protocol_Buffers
+### MVP
+- connect to device
+- select from a device in the list
+- device settings: name, version, etc
+- disconnect from device
+- remember connected device on restart
+- list of nodes: name, distance
+- map of nodes 
 
-https://github.com/meshtastic/Meshtastic-esp32/blob/master/docs/software/bluetooth-api.md
-https://github.com/meshtastic/Meshtastic-Android/blob/master/app/src/main/java/com/geeksville/mesh/service/RadioInterfaceService.kt
+### V2:
+- chat
+- device update
+

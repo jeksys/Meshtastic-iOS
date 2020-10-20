@@ -123,3 +123,11 @@ Implements the standard BLE contract for this service (has software version, har
 #### BatteryLevelService
 
 Implements the standard BLE contract service, provides battery level in a way that most client devices should automatically understand (i.e. it should show in the bluetooth devices screen automatically)
+
+
+https://github.com/apple/swift-protobuf
+https://www.raywenderlich.com/749-introduction-to-protocol-buffers-on-ios
+https://en.wikipedia.org/wiki/Protocol_Buffers
+
+https://github.com/meshtastic/Meshtastic-esp32/blob/master/docs/software/bluetooth-api.md
+https://github.com/meshtastic/Meshtastic-Android/blob/master/app/src/main/java/com/geeksville/mesh/service/RadioInterfaceService.kt

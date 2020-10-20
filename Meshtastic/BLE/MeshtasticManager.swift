@@ -10,7 +10,7 @@ import Foundation
 import CoreBluetooth
 import SwiftProtobuf
 
-protocol MeshtasticManagerUpdating: class {
+protocol MeshtasticManagerUpdating {
     func didDiscoverDevice(name: String?, peripheral: CBPeripheral, RSSI: NSNumber)
     func didConnect(to peripheral: CBPeripheral)
     func didDisconnect(to peripheral: CBPeripheral)
@@ -26,7 +26,7 @@ protocol MeshtasticBlueConnecting: class {
 class MeshtasticManager: NSObject, CBCentralManagerDelegate {
     
     private var central: CBCentralManager!
-    private var peripheral: CBPeripheral!
+    private(set) var peripheral: CBPeripheral!
     private var service: CBService?
     private var devices: [String: CBPeripheral] = [:]
     private var chars: [CBUUID: CBCharacteristic] = [:]
