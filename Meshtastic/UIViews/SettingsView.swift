@@ -47,6 +47,7 @@ struct SettingsView: View {
 }
 
 extension SettingsView: MeshtasticManagerUpdating {
+    
     func didReceiveConfig() {
     }
     

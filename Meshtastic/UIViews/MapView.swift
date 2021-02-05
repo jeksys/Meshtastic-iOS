@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MapboxDirections
 
 struct MapView: View {
     var body: some View {

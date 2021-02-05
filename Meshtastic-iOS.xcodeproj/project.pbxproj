@@ -22,6 +22,11 @@
 		D5A89FED253D20130012982E /* MConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FEA253D20130012982E /* MConnector.swift */; };
 		D5A89FEE253D20130012982E /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FEB253D20130012982E /* LogManager.swift */; };
 		D5A89FF1253D20490012982E /* mesh.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FF0253D20490012982E /* mesh.pb.swift */; };
+		D5ACF13525CD2ABE005D74C2 /* mesh.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13025CD2ABE005D74C2 /* mesh.pb.swift */; };
+		D5ACF13625CD2ABE005D74C2 /* portnums.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13125CD2ABE005D74C2 /* portnums.pb.swift */; };
+		D5ACF13725CD2ABE005D74C2 /* remote_hardware.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13225CD2ABE005D74C2 /* remote_hardware.pb.swift */; };
+		D5ACF13825CD2ABE005D74C2 /* apponly.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13325CD2ABE005D74C2 /* apponly.pb.swift */; };
+		D5ACF13925CD2ABE005D74C2 /* deviceonly.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13425CD2ABE005D74C2 /* deviceonly.pb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,12 @@
 		D5A89FEA253D20130012982E /* MConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MConnector.swift; sourceTree = "<group>"; };
 		D5A89FEB253D20130012982E /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		D5A89FF0253D20490012982E /* mesh.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mesh.pb.swift; sourceTree = "<group>"; };
+		D5ACF13025CD2ABE005D74C2 /* mesh.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mesh.pb.swift; sourceTree = "<group>"; };
+		D5ACF13125CD2ABE005D74C2 /* portnums.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = portnums.pb.swift; sourceTree = "<group>"; };
+		D5ACF13225CD2ABE005D74C2 /* remote_hardware.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remote_hardware.pb.swift; sourceTree = "<group>"; };
+		D5ACF13325CD2ABE005D74C2 /* apponly.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apponly.pb.swift; sourceTree = "<group>"; };
+		D5ACF13425CD2ABE005D74C2 /* deviceonly.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deviceonly.pb.swift; sourceTree = "<group>"; };
+		D5ACF13B25CD2ADD005D74C2 /* docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = docs.md; path = protobufs/docs/docs.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,7 @@
 		D5248FBB251ED2F900CF50E6 /* Meshtastic */ = {
 			isa = PBXGroup;
 			children = (
+				D5ACF13B25CD2ADD005D74C2 /* docs.md */,
 				D5A89FCB253D1EF60012982E /* device-api.md */,
 				D5249004251ED4E700CF50E6 /* README.md */,
 				D5A89FE8253D20130012982E /* BLE */,
@@ -105,12 +117,25 @@
 		D5A89FE8253D20130012982E /* BLE */ = {
 			isa = PBXGroup;
 			children = (
+				D5ACF12F25CD2ABE005D74C2 /* Proto */,
 				D5A89FF0253D20490012982E /* mesh.pb.swift */,
 				D5A89FE9253D20130012982E /* MeshtasticManager.swift */,
 				D5A89FEA253D20130012982E /* MConnector.swift */,
 				D5A89FEB253D20130012982E /* LogManager.swift */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		D5ACF12F25CD2ABE005D74C2 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				D5ACF13025CD2ABE005D74C2 /* mesh.pb.swift */,
+				D5ACF13125CD2ABE005D74C2 /* portnums.pb.swift */,
+				D5ACF13225CD2ABE005D74C2 /* remote_hardware.pb.swift */,
+				D5ACF13325CD2ABE005D74C2 /* apponly.pb.swift */,
+				D5ACF13425CD2ABE005D74C2 /* deviceonly.pb.swift */,
+			);
+			path = Proto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +219,16 @@
 				D55D9DBE253EA885005085B4 /* AppView.swift in Sources */,
 				D5A89FED253D20130012982E /* MConnector.swift in Sources */,
 				D5A89FEC253D20130012982E /* MeshtasticManager.swift in Sources */,
+				D5ACF13725CD2ABE005D74C2 /* remote_hardware.pb.swift in Sources */,
+				D5ACF13625CD2ABE005D74C2 /* portnums.pb.swift in Sources */,
 				D55D9DD4253EACFA005085B4 /* DevicesView.swift in Sources */,
+				D5ACF13525CD2ABE005D74C2 /* mesh.pb.swift in Sources */,
 				D5A89FF1253D20490012982E /* mesh.pb.swift in Sources */,
 				D5248FBD251ED2F900CF50E6 /* AppDelegate.swift in Sources */,
+				D5ACF13925CD2ABE005D74C2 /* deviceonly.pb.swift in Sources */,
 				D55D9DCC253EA95C005085B4 /* SettingsView.swift in Sources */,
 				D5A89FEE253D20130012982E /* LogManager.swift in Sources */,
+				D5ACF13825CD2ABE005D74C2 /* apponly.pb.swift in Sources */,
 				D5248FBF251ED2F900CF50E6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
