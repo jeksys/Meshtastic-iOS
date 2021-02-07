@@ -12,25 +12,25 @@ struct AppView: View {
         TabView {
             ChatView()
                 .tabItem {
-                    Image("main.chat")
+                    Image(systemName: "message.circle")
                     Text("Chat")
             }.tag(0)
-            
+
             MapView()
                 .tabItem {
-                    Image("main.maps")
+                    Image(systemName: "server.rack")
                     Text("Devices")
             }.tag(1)
 
-            DevicesView()
+            DeviceList()
                 .tabItem {
-                    Image("main.maps")
+                    Image(systemName: "map")
                     Text("Map")
             }.tag(2)
 
             SettingsView()
                 .tabItem {
-                    Image("main.settings")
+                    Image(systemName: "gearshape")
                     Text("Settings")
             }.tag(3)
         }

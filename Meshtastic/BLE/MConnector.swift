@@ -79,7 +79,7 @@ class MConnector: MConnectorProtocol {
                         getAllNodeInfo()
                         
                     default:
-                        print("**** another data: \(fromRadio)")
+                        print("**** another data:   n\(fromRadio)")
                         break
                     }
                 } catch let error {

@@ -36,12 +36,6 @@ struct SettingsView: View {
                 }
             }
                 .navigationBarTitle("Settings", displayMode: .inline)
-                .navigationBarItems(
-                    trailing:
-                        Button("S") {
-                            self.score += 1
-                        }
-                )
         }
     }
 }
@@ -58,11 +52,11 @@ extension SettingsView: MeshtasticManagerUpdating {
     }
     
     func didConnect(to peripheral: CBPeripheral) {
-        print(peripheral)
+        Log("\(peripheral)")
     }
     
     func didDisconnect(to peripheral: CBPeripheral) {
-        print(peripheral)
+        Log("\(peripheral)")
     }
 
 }

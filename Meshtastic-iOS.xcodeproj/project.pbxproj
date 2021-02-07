@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5248FBD251ED2F900CF50E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5248FBC251ED2F900CF50E6 /* AppDelegate.swift */; };
-		D5248FBF251ED2F900CF50E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5248FBE251ED2F900CF50E6 /* SceneDelegate.swift */; };
-		D5248FC1251ED2F900CF50E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5248FC0251ED2F900CF50E6 /* ViewController.swift */; };
 		D5248FC6251ED2FA00CF50E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */; };
 		D5248FC9251ED2FA00CF50E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5248FC7251ED2FA00CF50E6 /* LaunchScreen.storyboard */; };
 		D545D69C2525606300C0A1CD /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = D545D69B2525606300C0A1CD /* SwiftProtobuf */; };
+		D55AC05E25D099B200151E9D /* ConnectedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC05D25D099B200151E9D /* ConnectedDevice.swift */; };
+		D55AC0A725D0A02100151E9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC0A525D0A02100151E9D /* ContentView.swift */; };
+		D55AC0A825D0A02100151E9D /* Meshtastic_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC0A625D0A02100151E9D /* Meshtastic_iOSApp.swift */; };
+		D55AC0AB25D0A52700151E9D /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */; };
+		D55AC0AE25D0A63A00151E9D /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC0AD25D0A63A00151E9D /* DeviceView.swift */; };
 		D55D9DBE253EA885005085B4 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DBD253EA885005085B4 /* AppView.swift */; };
 		D55D9DC6253EA944005085B4 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DC5253EA944005085B4 /* ChatView.swift */; };
 		D55D9DC9253EA94E005085B4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DC8253EA94D005085B4 /* MapView.swift */; };
 		D55D9DCC253EA95C005085B4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DCB253EA95C005085B4 /* SettingsView.swift */; };
-		D55D9DD4253EACFA005085B4 /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DD3253EACFA005085B4 /* DevicesView.swift */; };
+		D55D9DD4253EACFA005085B4 /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DD3253EACFA005085B4 /* DeviceList.swift */; };
 		D5A89FEC253D20130012982E /* MeshtasticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FE9253D20130012982E /* MeshtasticManager.swift */; };
 		D5A89FED253D20130012982E /* MConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FEA253D20130012982E /* MConnector.swift */; };
 		D5A89FEE253D20130012982E /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FEB253D20130012982E /* LogManager.swift */; };
-		D5A89FF1253D20490012982E /* mesh.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A89FF0253D20490012982E /* mesh.pb.swift */; };
 		D5ACF13525CD2ABE005D74C2 /* mesh.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13025CD2ABE005D74C2 /* mesh.pb.swift */; };
 		D5ACF13625CD2ABE005D74C2 /* portnums.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13125CD2ABE005D74C2 /* portnums.pb.swift */; };
 		D5ACF13725CD2ABE005D74C2 /* remote_hardware.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ACF13225CD2ABE005D74C2 /* remote_hardware.pb.swift */; };
@@ -31,23 +32,24 @@
 
 /* Begin PBXFileReference section */
 		D5248FB9251ED2F900CF50E6 /* Meshtastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshtastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5248FBC251ED2F900CF50E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5248FBE251ED2F900CF50E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5248FC0251ED2F900CF50E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5248FC8251ED2FA00CF50E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5248FCA251ED2FA00CF50E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5249004251ED4E700CF50E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D55AC05D25D099B200151E9D /* ConnectedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedDevice.swift; sourceTree = "<group>"; };
+		D55AC0A525D0A02100151E9D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../../Desktop/Meshtastic-iOS/Meshtastic-iOS/ContentView.swift"; sourceTree = "<group>"; };
+		D55AC0A625D0A02100151E9D /* Meshtastic_iOSApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meshtastic_iOSApp.swift; path = "../../../../../Desktop/Meshtastic-iOS/Meshtastic-iOS/Meshtastic_iOSApp.swift"; sourceTree = "<group>"; };
+		D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		D55AC0AD25D0A63A00151E9D /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
 		D55D9DBD253EA885005085B4 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		D55D9DC5253EA944005085B4 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D55D9DC8253EA94D005085B4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D55D9DCB253EA95C005085B4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D55D9DD3253EACFA005085B4 /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
+		D55D9DD3253EACFA005085B4 /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
 		D5A89FCB253D1EF60012982E /* device-api.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "device-api.md"; sourceTree = "<group>"; };
 		D5A89FE9253D20130012982E /* MeshtasticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeshtasticManager.swift; sourceTree = "<group>"; };
 		D5A89FEA253D20130012982E /* MConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MConnector.swift; sourceTree = "<group>"; };
 		D5A89FEB253D20130012982E /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
-		D5A89FF0253D20490012982E /* mesh.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mesh.pb.swift; sourceTree = "<group>"; };
 		D5ACF13025CD2ABE005D74C2 /* mesh.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mesh.pb.swift; sourceTree = "<group>"; };
 		D5ACF13125CD2ABE005D74C2 /* portnums.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = portnums.pb.swift; sourceTree = "<group>"; };
 		D5ACF13225CD2ABE005D74C2 /* remote_hardware.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remote_hardware.pb.swift; sourceTree = "<group>"; };
@@ -90,16 +92,32 @@
 				D5ACF13B25CD2ADD005D74C2 /* docs.md */,
 				D5A89FCB253D1EF60012982E /* device-api.md */,
 				D5249004251ED4E700CF50E6 /* README.md */,
+				D55AC0A525D0A02100151E9D /* ContentView.swift */,
+				D55AC0A625D0A02100151E9D /* Meshtastic_iOSApp.swift */,
 				D5A89FE8253D20130012982E /* BLE */,
-				D5248FBC251ED2F900CF50E6 /* AppDelegate.swift */,
-				D5248FBE251ED2F900CF50E6 /* SceneDelegate.swift */,
 				D55D9DCE253EA96B005085B4 /* UIViews */,
-				D5248FC0251ED2F900CF50E6 /* ViewController.swift */,
 				D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */,
 				D5248FC7251ED2FA00CF50E6 /* LaunchScreen.storyboard */,
 				D5248FCA251ED2FA00CF50E6 /* Info.plist */,
 			);
 			path = Meshtastic;
+			sourceTree = "<group>";
+		};
+		D55AC06625D099C900151E9D /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				D55AC05D25D099B200151E9D /* ConnectedDevice.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		D55AC06725D099D900151E9D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D55AC06625D099C900151E9D /* Device */,
+				D55D9DCB253EA95C005085B4 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		D55D9DCE253EA96B005085B4 /* UIViews */ = {
@@ -108,8 +126,10 @@
 				D55D9DBD253EA885005085B4 /* AppView.swift */,
 				D55D9DC5253EA944005085B4 /* ChatView.swift */,
 				D55D9DC8253EA94D005085B4 /* MapView.swift */,
-				D55D9DD3253EACFA005085B4 /* DevicesView.swift */,
-				D55D9DCB253EA95C005085B4 /* SettingsView.swift */,
+				D55D9DD3253EACFA005085B4 /* DeviceList.swift */,
+				D55AC0AD25D0A63A00151E9D /* DeviceView.swift */,
+				D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */,
+				D55AC06725D099D900151E9D /* Settings */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -118,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				D5ACF12F25CD2ABE005D74C2 /* Proto */,
-				D5A89FF0253D20490012982E /* mesh.pb.swift */,
 				D5A89FE9253D20130012982E /* MeshtasticManager.swift */,
 				D5A89FEA253D20130012982E /* MConnector.swift */,
 				D5A89FEB253D20130012982E /* LogManager.swift */,
@@ -213,23 +232,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5248FC1251ED2F900CF50E6 /* ViewController.swift in Sources */,
 				D55D9DC6253EA944005085B4 /* ChatView.swift in Sources */,
 				D55D9DC9253EA94E005085B4 /* MapView.swift in Sources */,
+				D55AC0AE25D0A63A00151E9D /* DeviceView.swift in Sources */,
 				D55D9DBE253EA885005085B4 /* AppView.swift in Sources */,
 				D5A89FED253D20130012982E /* MConnector.swift in Sources */,
 				D5A89FEC253D20130012982E /* MeshtasticManager.swift in Sources */,
 				D5ACF13725CD2ABE005D74C2 /* remote_hardware.pb.swift in Sources */,
+				D55AC0A725D0A02100151E9D /* ContentView.swift in Sources */,
+				D55AC0AB25D0A52700151E9D /* DeviceInfo.swift in Sources */,
+				D55AC0A825D0A02100151E9D /* Meshtastic_iOSApp.swift in Sources */,
+				D55AC05E25D099B200151E9D /* ConnectedDevice.swift in Sources */,
 				D5ACF13625CD2ABE005D74C2 /* portnums.pb.swift in Sources */,
-				D55D9DD4253EACFA005085B4 /* DevicesView.swift in Sources */,
+				D55D9DD4253EACFA005085B4 /* DeviceList.swift in Sources */,
 				D5ACF13525CD2ABE005D74C2 /* mesh.pb.swift in Sources */,
-				D5A89FF1253D20490012982E /* mesh.pb.swift in Sources */,
-				D5248FBD251ED2F900CF50E6 /* AppDelegate.swift in Sources */,
 				D5ACF13925CD2ABE005D74C2 /* deviceonly.pb.swift in Sources */,
 				D55D9DCC253EA95C005085B4 /* SettingsView.swift in Sources */,
 				D5A89FEE253D20130012982E /* LogManager.swift in Sources */,
 				D5ACF13825CD2ABE005D74C2 /* apponly.pb.swift in Sources */,
-				D5248FBF251ED2F900CF50E6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
