@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DEE520925D0BA71003C6EB7 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 0DEE520825D0BA71003C6EB7 /* SwiftProtobuf */; };
+		0DEE520D25D0BE8B003C6EB7 /* DeviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE520C25D0BE8B003C6EB7 /* DeviceDetailView.swift */; };
 		D5248FC6251ED2FA00CF50E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */; };
 		D5248FC9251ED2FA00CF50E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5248FC7251ED2FA00CF50E6 /* LaunchScreen.storyboard */; };
-		D545D69C2525606300C0A1CD /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = D545D69B2525606300C0A1CD /* SwiftProtobuf */; };
-		D55AC05E25D099B200151E9D /* ConnectedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC05D25D099B200151E9D /* ConnectedDevice.swift */; };
 		D55AC0AB25D0A52700151E9D /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */; };
 		D55AC0AE25D0A63A00151E9D /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AC0AD25D0A63A00151E9D /* DeviceView.swift */; };
 		D55D9DBE253EA885005085B4 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D9DBD253EA885005085B4 /* AppView.swift */; };
@@ -31,12 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DEE520C25D0BE8B003C6EB7 /* DeviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailView.swift; sourceTree = "<group>"; };
 		D5248FB9251ED2F900CF50E6 /* Meshtastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshtastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5248FC8251ED2FA00CF50E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5248FCA251ED2FA00CF50E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5249004251ED4E700CF50E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D55AC05D25D099B200151E9D /* ConnectedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedDevice.swift; sourceTree = "<group>"; };
 		D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		D55AC0AD25D0A63A00151E9D /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
 		D55D9DBD253EA885005085B4 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -55,7 +55,6 @@
 		D5ACF13225CD2ABE005D74C2 /* remote_hardware.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = remote_hardware.pb.swift; sourceTree = "<group>"; };
 		D5ACF13325CD2ABE005D74C2 /* apponly.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apponly.pb.swift; sourceTree = "<group>"; };
 		D5ACF13425CD2ABE005D74C2 /* deviceonly.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deviceonly.pb.swift; sourceTree = "<group>"; };
-		D5ACF13B25CD2ADD005D74C2 /* docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = docs.md; path = protobufs/docs/docs.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +62,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D545D69C2525606300C0A1CD /* SwiftProtobuf in Frameworks */,
+				0DEE520925D0BA71003C6EB7 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DEE521225D0CEAC003C6EB7 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				D55D9DD3253EACFA005085B4 /* DeviceList.swift */,
+				D55AC0AD25D0A63A00151E9D /* DeviceView.swift */,
+				0DEE520C25D0BE8B003C6EB7 /* DeviceDetailView.swift */,
+				D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
 		D5248FB0251ED2F900CF50E6 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +99,6 @@
 		D5248FBB251ED2F900CF50E6 /* Meshtastic */ = {
 			isa = PBXGroup;
 			children = (
-				D5ACF13B25CD2ADD005D74C2 /* docs.md */,
 				D5A89FCB253D1EF60012982E /* device-api.md */,
 				D5249004251ED4E700CF50E6 /* README.md */,
 				D5971DF825D0B22C002ED9FF /* ContentView.swift */,
@@ -106,7 +115,6 @@
 		D55AC06625D099C900151E9D /* Device */ = {
 			isa = PBXGroup;
 			children = (
-				D55AC05D25D099B200151E9D /* ConnectedDevice.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -126,9 +134,7 @@
 				D55D9DBD253EA885005085B4 /* AppView.swift */,
 				D55D9DC5253EA944005085B4 /* ChatView.swift */,
 				D55D9DC8253EA94D005085B4 /* MapView.swift */,
-				D55D9DD3253EACFA005085B4 /* DeviceList.swift */,
-				D55AC0AD25D0A63A00151E9D /* DeviceView.swift */,
-				D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */,
+				0DEE521225D0CEAC003C6EB7 /* Devices */,
 				D55AC06725D099D900151E9D /* Settings */,
 			);
 			path = UIViews;
@@ -174,7 +180,7 @@
 			);
 			name = Meshtastic;
 			packageProductDependencies = (
-				D545D69B2525606300C0A1CD /* SwiftProtobuf */,
+				0DEE520825D0BA71003C6EB7 /* SwiftProtobuf */,
 			);
 			productName = "M-iOS_test";
 			productReference = D5248FB9251ED2F900CF50E6 /* Meshtastic.app */;
@@ -204,7 +210,7 @@
 			);
 			mainGroup = D5248FB0251ED2F900CF50E6;
 			packageReferences = (
-				D545D69A2525606300C0A1CD /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				0DEE520725D0BA71003C6EB7 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			productRefGroup = D5248FBA251ED2F900CF50E6 /* Products */;
 			projectDirPath = "";
@@ -236,12 +242,12 @@
 				D55D9DC9253EA94E005085B4 /* MapView.swift in Sources */,
 				D5971DF925D0B22C002ED9FF /* Meshtastic_iOSApp.swift in Sources */,
 				D55AC0AE25D0A63A00151E9D /* DeviceView.swift in Sources */,
+				0DEE520D25D0BE8B003C6EB7 /* DeviceDetailView.swift in Sources */,
 				D55D9DBE253EA885005085B4 /* AppView.swift in Sources */,
 				D5A89FED253D20130012982E /* MConnector.swift in Sources */,
 				D5A89FEC253D20130012982E /* MeshtasticManager.swift in Sources */,
 				D5ACF13725CD2ABE005D74C2 /* remote_hardware.pb.swift in Sources */,
 				D55AC0AB25D0A52700151E9D /* DeviceInfo.swift in Sources */,
-				D55AC05E25D099B200151E9D /* ConnectedDevice.swift in Sources */,
 				D5ACF13625CD2ABE005D74C2 /* portnums.pb.swift in Sources */,
 				D55D9DD4253EACFA005085B4 /* DeviceList.swift in Sources */,
 				D5ACF13525CD2ABE005D74C2 /* mesh.pb.swift in Sources */,
@@ -445,20 +451,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D545D69A2525606300C0A1CD /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+		0DEE520725D0BA71003C6EB7 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:apple/swift-protobuf.git";
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.12.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D545D69B2525606300C0A1CD /* SwiftProtobuf */ = {
+		0DEE520825D0BA71003C6EB7 /* SwiftProtobuf */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D545D69A2525606300C0A1CD /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			package = 0DEE520725D0BA71003C6EB7 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
 			productName = SwiftProtobuf;
 		};
 /* End XCSwiftPackageProductDependency section */

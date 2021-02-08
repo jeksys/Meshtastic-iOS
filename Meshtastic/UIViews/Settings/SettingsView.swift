@@ -11,17 +11,15 @@ import CoreBluetooth
 /*
  Connect device button
  Disconnect device button
- 
- 
  */
 
 struct SettingsView: View {
-    @State private var score = 0
-
     var manager : MeshtasticManager!
     @State private var peripheral: CBPeripheral? = nil
+    @Binding var devices: [DeviceInfo]
     
-    init() {
+    init(devices: Binding<[DeviceInfo]>) {
+        self._devices = devices
         manager = MeshtasticManager()
         manager.delegate = self
     }
@@ -35,6 +33,14 @@ struct SettingsView: View {
                     Text("Connect device")
                 }
             }
+            VStack{
+                Text("Devices")
+                List {
+                    ForEach(devices) { device in
+                        DeviceView(device: device)
+                    }
+                }
+            }
                 .navigationBarTitle("Settings", displayMode: .inline)
         }
     }
@@ -43,6 +49,7 @@ struct SettingsView: View {
 extension SettingsView: MeshtasticManagerUpdating {
     
     func didReceiveConfig() {
+        Log("")
     }
     
     func didDiscoverDevice(name: String?, peripheral: CBPeripheral, RSSI: NSNumber) {
@@ -63,6 +70,6 @@ extension SettingsView: MeshtasticManagerUpdating {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(devices: .constant(DeviceInfo.data))
     }
 }

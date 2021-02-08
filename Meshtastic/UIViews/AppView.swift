@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AppView: View {
+    @State private var devices = [DeviceInfo]()
+    
     var body: some View {
         TabView {
             ChatView()
@@ -16,19 +18,19 @@ struct AppView: View {
                     Text("Chat")
             }.tag(0)
 
-            MapView()
+            MapView(devices: $devices)
                 .tabItem {
                     Image(systemName: "server.rack")
                     Text("Devices")
             }.tag(1)
 
-            DeviceList()
+            DeviceList(devices: $devices)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Map")
             }.tag(2)
 
-            SettingsView()
+            SettingsView(devices: $devices)
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")

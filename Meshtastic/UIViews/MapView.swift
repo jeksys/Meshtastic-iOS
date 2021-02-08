@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MapView: View {
+    @Binding var devices: [DeviceInfo]
+    
     var body: some View {
         Text("Map")
     }
@@ -15,6 +17,7 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(devices: .constant(DeviceInfo.data))
     }
 }
+
