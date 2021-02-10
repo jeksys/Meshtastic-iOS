@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct AppView: View {
-    @State private var devices = [DeviceInfo]()
+    @State private var meshDevices = [MeshDevice]()
+    @State private var bleDevices = [DeviceInfo]()
+
+    init() {
+        setDebugLevel(level: .debug, for: .generic)
+        setDebugLevel(level: .info, for: .network)
+        setDebugLevel(level: .debug, for: .mesh)
+    }
     
     var body: some View {
         TabView {
@@ -18,19 +25,19 @@ struct AppView: View {
                     Text("Chat")
             }.tag(0)
 
-            MapView(devices: $devices)
-                .tabItem {
-                    Image(systemName: "server.rack")
-                    Text("Devices")
-            }.tag(1)
-
-            DeviceList(devices: $devices)
+            MapView(devices: $meshDevices)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Map")
+            }.tag(1)
+
+            DeviceList(devices: $meshDevices)
+                .tabItem {
+                    Image(systemName: "server.rack")
+                    Text("Devices")
             }.tag(2)
 
-            SettingsView(devices: $devices)
+            SettingsView(meshDevices: $meshDevices, devices: $bleDevices)
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")

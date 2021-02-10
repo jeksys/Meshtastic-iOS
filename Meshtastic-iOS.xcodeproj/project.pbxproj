@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D164ED425D1A35600E9B91B /* MeshDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D164ED325D1A35600E9B91B /* MeshDevice.swift */; };
+		0D164ED825D1A3C700E9B91B /* MeshDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D164ED725D1A3C700E9B91B /* MeshDeviceView.swift */; };
+		0D4E46F725D3C3C5008686AB /* LogManagerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E46F625D3C3C5008686AB /* LogManagerTemplate.swift */; };
 		0DEE520925D0BA71003C6EB7 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 0DEE520825D0BA71003C6EB7 /* SwiftProtobuf */; };
 		0DEE520D25D0BE8B003C6EB7 /* DeviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE520C25D0BE8B003C6EB7 /* DeviceDetailView.swift */; };
 		D5248FC6251ED2FA00CF50E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D164ED325D1A35600E9B91B /* MeshDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshDevice.swift; sourceTree = "<group>"; };
+		0D164ED725D1A3C700E9B91B /* MeshDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshDeviceView.swift; sourceTree = "<group>"; };
+		0D4E46F625D3C3C5008686AB /* LogManagerTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManagerTemplate.swift; sourceTree = "<group>"; };
 		0DEE520C25D0BE8B003C6EB7 /* DeviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailView.swift; sourceTree = "<group>"; };
 		D5248FB9251ED2F900CF50E6 /* Meshtastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meshtastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,10 +80,19 @@
 			children = (
 				D55D9DD3253EACFA005085B4 /* DeviceList.swift */,
 				D55AC0AD25D0A63A00151E9D /* DeviceView.swift */,
+				0D164ED725D1A3C700E9B91B /* MeshDeviceView.swift */,
 				0DEE520C25D0BE8B003C6EB7 /* DeviceDetailView.swift */,
-				D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */,
 			);
 			path = Devices;
+			sourceTree = "<group>";
+		};
+		0DEE521725D0EAC6003C6EB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D55AC0AA25D0A52700151E9D /* DeviceInfo.swift */,
+				0D164ED325D1A35600E9B91B /* MeshDevice.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D5248FB0251ED2F900CF50E6 = {
@@ -101,10 +116,13 @@
 			children = (
 				D5A89FCB253D1EF60012982E /* device-api.md */,
 				D5249004251ED4E700CF50E6 /* README.md */,
+				0D4E46F625D3C3C5008686AB /* LogManagerTemplate.swift */,
 				D5971DF825D0B22C002ED9FF /* ContentView.swift */,
 				D5971DF725D0B22C002ED9FF /* Meshtastic_iOSApp.swift */,
+				D5A89FEB253D20130012982E /* LogManager.swift */,
+				0DEE521725D0EAC6003C6EB7 /* Models */,
 				D5A89FE8253D20130012982E /* BLE */,
-				D55D9DCE253EA96B005085B4 /* UIViews */,
+				D55D9DCE253EA96B005085B4 /* Views */,
 				D5248FC5251ED2FA00CF50E6 /* Assets.xcassets */,
 				D5248FC7251ED2FA00CF50E6 /* LaunchScreen.storyboard */,
 				D5248FCA251ED2FA00CF50E6 /* Info.plist */,
@@ -112,32 +130,23 @@
 			path = Meshtastic;
 			sourceTree = "<group>";
 		};
-		D55AC06625D099C900151E9D /* Device */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Device;
-			sourceTree = "<group>";
-		};
 		D55AC06725D099D900151E9D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D55AC06625D099C900151E9D /* Device */,
 				D55D9DCB253EA95C005085B4 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		D55D9DCE253EA96B005085B4 /* UIViews */ = {
+		D55D9DCE253EA96B005085B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D55D9DBD253EA885005085B4 /* AppView.swift */,
 				D55D9DC5253EA944005085B4 /* ChatView.swift */,
 				D55D9DC8253EA94D005085B4 /* MapView.swift */,
 				0DEE521225D0CEAC003C6EB7 /* Devices */,
 				D55AC06725D099D900151E9D /* Settings */,
 			);
-			path = UIViews;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D5A89FE8253D20130012982E /* BLE */ = {
@@ -145,8 +154,8 @@
 			children = (
 				D5ACF12F25CD2ABE005D74C2 /* Proto */,
 				D5A89FE9253D20130012982E /* MeshtasticManager.swift */,
+				D55D9DBD253EA885005085B4 /* AppView.swift */,
 				D5A89FEA253D20130012982E /* MConnector.swift */,
-				D5A89FEB253D20130012982E /* LogManager.swift */,
 			);
 			path = BLE;
 			sourceTree = "<group>";
@@ -241,14 +250,17 @@
 				D55D9DC6253EA944005085B4 /* ChatView.swift in Sources */,
 				D55D9DC9253EA94E005085B4 /* MapView.swift in Sources */,
 				D5971DF925D0B22C002ED9FF /* Meshtastic_iOSApp.swift in Sources */,
+				0D164ED825D1A3C700E9B91B /* MeshDeviceView.swift in Sources */,
 				D55AC0AE25D0A63A00151E9D /* DeviceView.swift in Sources */,
 				0DEE520D25D0BE8B003C6EB7 /* DeviceDetailView.swift in Sources */,
 				D55D9DBE253EA885005085B4 /* AppView.swift in Sources */,
 				D5A89FED253D20130012982E /* MConnector.swift in Sources */,
+				0D164ED425D1A35600E9B91B /* MeshDevice.swift in Sources */,
 				D5A89FEC253D20130012982E /* MeshtasticManager.swift in Sources */,
 				D5ACF13725CD2ABE005D74C2 /* remote_hardware.pb.swift in Sources */,
 				D55AC0AB25D0A52700151E9D /* DeviceInfo.swift in Sources */,
 				D5ACF13625CD2ABE005D74C2 /* portnums.pb.swift in Sources */,
+				0D4E46F725D3C3C5008686AB /* LogManagerTemplate.swift in Sources */,
 				D55D9DD4253EACFA005085B4 /* DeviceList.swift in Sources */,
 				D5ACF13525CD2ABE005D74C2 /* mesh.pb.swift in Sources */,
 				D5ACF13925CD2ABE005D74C2 /* deviceonly.pb.swift in Sources */,

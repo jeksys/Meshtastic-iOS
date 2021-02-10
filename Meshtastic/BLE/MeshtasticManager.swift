@@ -18,25 +18,25 @@ protocol MeshtasticManagerUpdating {
 }
 
 protocol MeshtasticBlueConnecting: class {
-    func readValue(for characteristicID: String)
-    func peripheralWrite(data: Data?, characteristicID: String)
+    func readValue(from peripheral: CBPeripheral, characteristicID: String)
+    func peripheralWrite(peripheral: CBPeripheral, data: Data?, characteristicID: String)
     func didReceiveConfig()
 }
 
 class MeshtasticManager: NSObject, CBCentralManagerDelegate {
     
     private var central: CBCentralManager!
-    private(set) var peripheral: CBPeripheral!
     private var service: CBService?
     private var devices: [String: CBPeripheral] = [:]
     private var chars: [CBUUID: CBCharacteristic] = [:]
+    private var connector : MConnectorProtocol!
 
     var delegate: MeshtasticManagerUpdating?
-    var connector : MConnectorProtocol!
     
     override init() {
         super.init()
-        central = CBCentralManager(delegate: self, queue: nil)
+        let options = [CBCentralManagerOptionRestoreIdentifierKey: "com.meshtastic.ble-central"]
+        central = CBCentralManager(delegate: self, queue: nil, options: options)
         connector = MConnector(bleManager: self)
     }
     
@@ -50,6 +50,10 @@ class MeshtasticManager: NSObject, CBCentralManagerDelegate {
 
     func stopScan(){
         central.stopScan()
+    }
+    
+    func startConfig(peripheral: CBPeripheral) {
+        connector.startConfig(peripheral: peripheral)
     }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -70,14 +74,27 @@ class MeshtasticManager: NSObject, CBCentralManagerDelegate {
     
     func connect(peripheral: CBPeripheral) {
         central.stopScan()
-        self.peripheral = peripheral
         peripheral.delegate = self
         central.connect(peripheral)
     }
-    
+
+    func disconnect(peripheral: CBPeripheral) {
+        central.stopScan()
+        peripheral.delegate = self
+        central.cancelPeripheralConnection(peripheral)
+    }
+
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         delegate?.didConnect(to: peripheral)
         peripheral.discoverServices([CBUUID(string: MConnector.Chars.meshtasticServiceUUID)])
+    }
+    
+    func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
+        Log("willRestoreState: \(dict)")
+        let restoredPeripherals = dict[CBCentralManagerRestoredStatePeripheralsKey] as? [CBPeripheral]
+        Log("restoredPeripherals: \(String(describing: restoredPeripherals))")
+        restoredPeripherals?.forEach({delegate?.didDiscoverDevice(name: nil, peripheral: $0, RSSI: 0)})
+        restoredPeripherals?.filter({$0.state == .connected}).forEach({delegate?.didConnect(to: $0)})
     }
     
 }
@@ -110,13 +127,13 @@ extension MeshtasticManager: CBPeripheralDelegate {
                 peripheral.setNotifyValue(true, for: characteristic)
             }
         }
-        connector.startConfig()
+        connector.startConfig(peripheral: peripheral)
     }
 
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         guard let characteristicData = characteristic.value else { return }
         Log("\(characteristic.uuid): \(characteristicData.toString())")
-        connector.didReceive(data: characteristicData, char: characteristic.uuid.uuidString.uppercased())
+        connector.didReceive(peripheral: peripheral, data: characteristicData, characteristic: characteristic.uuid.uuidString.uppercased())
 
         switch characteristic.uuid.uuidString.uppercased() {
         default:
@@ -131,7 +148,10 @@ extension MeshtasticManager: CBPeripheralDelegate {
 }
 
 extension MeshtasticManager: MeshtasticBlueConnecting {
-    func readValue(for characteristicID: String) {
+    
+    func readValue(from peripheral: CBPeripheral, characteristicID: String) {
+        Log("\(peripheral.name): \(characteristicID)")
+        
         let charID = CBUUID(string: characteristicID)
 //        let char = service?.characteristics
         guard let characteristic = chars[charID] else {
@@ -140,8 +160,9 @@ extension MeshtasticManager: MeshtasticBlueConnecting {
         peripheral.readValue(for: characteristic)
     }
     
-    func peripheralWrite(data: Data?, characteristicID: String) {
+    func peripheralWrite(peripheral: CBPeripheral, data: Data?, characteristicID: String) {
         let charID = CBUUID(string: characteristicID)
+        Log("\(peripheral.name): \(characteristicID); \(data)")
 
         guard let data = data else {
             return

@@ -11,7 +11,7 @@ struct DeviceDetailView: View {
     @Binding var device: DeviceInfo
     
     var body: some View {
-        VStack{
+        VStack(){
             DeviceView(device: device)
             .padding()
             if let location = device.location {

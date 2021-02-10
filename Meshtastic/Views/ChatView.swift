@@ -10,10 +10,12 @@ import SwiftUI
 struct ChatView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Chat")
+            Form {
+                Section {
+                    Text("Chat message")
+                }
             }
-            .navigationBarTitle("Chat", displayMode: .inline)
+            .navigationBarTitle(Text("Chat"))
         }
     }
 }

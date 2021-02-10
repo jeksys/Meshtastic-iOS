@@ -13,8 +13,12 @@ struct DeviceView: View {
     var body: some View {
         VStack{
             HStack{
+                if device.isConnected {
+                    Image(systemName: "checkmark")
+                }
                 Image(systemName: "person")
                     .font(.system(size: 12))
+                    .lineLimit(0)
                 Text(device.name)
                 VStack(alignment: .leading) {
                     HStack{

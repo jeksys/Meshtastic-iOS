@@ -10,9 +10,9 @@ import Foundation
 
 func Log(_ text: Any?, funcName: String = #function) {
     if let text = (text as AnyObject).description {
-        print("(-) \(funcName): \(text.description)")
+        print("\(funcName):\n\(text.description)")
     } else {
-        print("(-) \(funcName)")
+        print("\n\(funcName)")
     }
 }
 
