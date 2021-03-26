@@ -13,3 +13,7 @@
 - [ ] chat
 - [ ] device update
 - [ ] offline map
+
+
+### Not Important:
+- [ ] test git push/pull from Xcode.
